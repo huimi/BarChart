@@ -15,9 +15,10 @@ function Bar() {
             <li key={idx}
                 style={{
                   gridColumn: idx+1,
-                  gridRow: `${10-getRow(d.amount)+1} / ${11}`
+                  gridRow: `${10-getRow(d.amount)+1} / ${11}`,
+                  backgroundColor: d.amount == maxValue ? 'hsl(186, 34%, 60%)':'hsl(10, 79%, 65%)'
                 }}
-            ></li>
+            ><div className="tooltip">{`$${d.amount}`}</div></li>
           )
         })}
       </ul>
