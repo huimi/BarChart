@@ -16,7 +16,7 @@ function Bar() {
                 style={{
                   gridColumn: idx+1,
                   gridRow: `${10-getRow(d.amount)+1} / ${11}`,
-                  backgroundColor: d.amount == maxValue ? 'hsl(186, 34%, 60%)':'hsl(10, 79%, 65%)'
+                  backgroundColor: d.amount === maxValue ? 'hsl(186, 34%, 60%)':'hsl(10, 79%, 65%)'
                 }}
             ><div className="tooltip">{`$${d.amount}`}</div></li>
           )
